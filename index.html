@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>girl dance animation</title>
+    <style>
+    .container{
+       margin: 0;
+       padding:0;
+
+    }
+    .bg{
+       background-image: url(./background2.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+       height:700px;
+       width:100%;
+       position:relative;
+
+    }
+    .grass{
+    background-image: url(./.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:900px;
+    width:100%;
+    position:absolute;
+    }
+    .speaker{
+      background-image: url(./speaker.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height:450px;
+      width:20%;
+      position:absolute;
+      top:170px;
+      left:840px;
+    }
+    img{
+      /*background-image: url(./dance.png);
+      background-repeat: no-repeat;
+      background-size: contain;*/
+      height:400px;
+      max-width:100%;
+      position:absolute;
+      right: 450px;
+        bottom: 30px;
+
+    }
+    #buttonON{
+      font-size: 25px;
+      background-color:#9a2e07 ;
+
+      color:white;
+      position:absolute;
+      top:310px;
+      left:20px;
+    border-radius: 20px;
+    }
+    #buttonOFF{
+      font-size: 25px;
+      background-color:#9a2e07;
+      color:white;
+      position:absolute;
+      top:310px;
+      left:120px;
+      border-radius: 20px;
+
+
+    }
+
+    </style>
+  </head>
+  <body>
+
+      <div class="container">
+        <div class="bg">
+          <div class="grass">
+            <div class="speaker">
+           <div class="girl">
+          <img id="dance" src="girl2dance.png" alt="">
+           </div>
+            <button id="buttonON" onclick="getElementById('dance').src='girl2.gif'" >ON</button>
+            <button  id="buttonOFF" onclick="getElementById('dance').src='girl2dance.png'">OFF</button>
+            </div>
+            </div>
+          </div>
+        </div>
+  </body>
+  <script >
+  var audio=new Audio('muqablaSong.mp3');
+   document.getElementById('buttonON').addEventListener('click',myFunction);
+
+ function myFunction(){
+
+   audio.play();
+ }
+ document.getElementById('buttonOFF').addEventListener('click',secondFunction);
+
+ function secondFunction(){
+
+ audio.pause();
+ }
+
+
+  </script>
+</html>
